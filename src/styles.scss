@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+/* Color palette */
+$french-lilac: #8d5a97;
+$mountbatten-pink: #907f9f;
+$silver-metallic: #a4a5ae;
+$opal: #b0c7bd;
+$magic-mint: #b8ebd0;
+
+/* Utility classes */
+.full-w {
+    width: 100% !important;
+}
+
+.full-h {
+    height: 100% !important;
+}
+
+.p-xs {
+    padding: 0.25rem !important;
+}
+
+.m-xs {
+    margin: 0.25rem !important;
+}
+
+.p-s {
+    padding: 0.5rem !important;
+}
+
+.m-s {
+    margin: 0.5rem !important;
+}
+
+.p-m {
+    padding: 0.75rem !important;
+}
+
+.m-m {
+    margin: 0.75rem !important;
+}
+
+.p-l {
+    padding: 1rem !important;
+}
+
+.m-l {
+    margin: 1rem !important;
+}
