@@ -1,0 +1,76 @@
+@use "../../../../@theme/variables.scss" as v;
+
+.city-card-wrapper {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 0px rgba(50, 50, 50, 0.43);
+
+  a {
+    text-decoration: none;
+
+    .main-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid v.$opal;
+
+      .city-name {
+        font-family: "NoticiaText";
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: v.$mountbatten-pink;
+      }
+
+      .main-temp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 600;
+        color: v.$opal;
+
+        .actual {
+          .temperature {
+            font-size: 2.1rem;
+          }
+
+          .unit-of-measure {
+            font-size: 1.5rem;
+          }
+        }
+
+        .feels-like {
+          font-size: 0.7rem;
+          color: v.$silver-metallic;
+        }
+      }
+    }
+
+    .weather-summary {
+      font-size: 0.8rem;
+      color: v.$dark-silver;
+    }
+
+    .secondary-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: v.$dark-silver;
+
+      .humidity,
+      .wind,
+      .clouds {
+        flex-basis: 30%;
+        text-align: center;
+        font-size: 0.9rem;
+
+        fa-icon {
+          color: v.$magic-mint;
+        }
+
+        &:not(:last-of-type) {
+          border-right: 2px solid v.$opal;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.city-list-wrapper {
+    .cities {
+        display: flex;
+        align-items: center;
+
+        .city {
+            flex-basis: 33%;
+        }
+    }
+}

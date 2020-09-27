@@ -1,0 +1,11 @@
+<div class="city-list-wrapper">
+    <ng-container *ngIf="cities$ | async as cities">
+        <ng-container *ngIf="cities?.list?.length > 0">
+            <div class="cities">
+                <div class="city p-md" *ngFor="let city of cities.list">
+                    <app-city-card [city]="city"></app-city-card>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+</div>

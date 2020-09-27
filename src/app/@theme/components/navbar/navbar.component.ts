@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { faCog } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "weather-navbar",
@@ -6,6 +7,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./navbar.component.scss"],
 })
 export class NavbarComponent implements OnInit {
+  faCog = faCog;
+
   constructor() {}
 
   ngOnInit(): void {}

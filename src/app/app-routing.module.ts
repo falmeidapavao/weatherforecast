@@ -10,6 +10,12 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/home/home.module").then((m) => m.HomeModule),
   },
+  {
+    path: "preferences",
+    component: HomeComponent,
+    loadChildren: () =>
+      import("./pages/home/home.module").then((m) => m.HomeModule),
+  },
 ];
 
 @NgModule({

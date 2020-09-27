@@ -1,47 +1,245 @@
-/* Color palette */
-$french-lilac: #8d5a97;
-$mountbatten-pink: #907f9f;
-$silver-metallic: #a4a5ae;
-$opal: #b0c7bd;
-$magic-mint: #b8ebd0;
+@use "./app/@theme/variables.scss" as v;
+
+/* Fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/roboto/Roboto-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/roboto/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/roboto/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/roboto/Roboto-Bold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "NoticiaText";
+  src: url(assets/fonts/noticia-text/NoticiaText-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "NoticiaText";
+  src: url(assets/fonts/noticia-text/NoticiaText-Bold.ttf);
+  font-weight: 600;
+}
+
+/* General */
+html,
+body {
+  min-height: 100vh;
+  font-family: "Roboto";
+  background-color: v.$light-silver;
+}
+
+body {
+  margin: 0;
+}
+
+h5,
+h4,
+h3,
+h2,
+h1 {
+  font-family: "NoticiaText";
+}
+
+/* Form elements */
+input {
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 2px solid v.$silver-metallic;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  &::placeholder {
+    font-family: "Roboto";
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
 
 /* Utility classes */
 .full-w {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .full-h {
-    height: 100% !important;
+  height: 100% !important;
 }
 
+/* Padding utilities */
+/* xs */
 .p-xs {
-    padding: 0.25rem !important;
+  padding: 0.25rem !important;
+}
+.px-xs {
+  padding-right: 0.25rem !important;
+  padding-left: 0.25rem !important;
+}
+.py-xs {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+.pt-xs {
+  padding-top: 0.25rem !important;
+}
+.pb-xs {
+  padding-bottom: 0.25rem !important;
+}
+.pr-xs {
+  padding-right: 0.25rem !important;
+}
+.pl-xs {
+  padding-left: 0.25rem !important;
 }
 
-.m-xs {
-    margin: 0.25rem !important;
-}
-
+/* sm */
 .p-s {
-    padding: 0.5rem !important;
+  padding: 0.5rem !important;
+}
+.p-sm {
+  padding: 0.5rem !important;
+}
+.px-sm {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+}
+.py-sm {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+.pt-sm {
+  padding-top: 0.5rem !important;
+}
+.pb-sm {
+  padding-bottom: 0.5rem !important;
+}
+.pr-sm {
+  padding-right: 0.5rem !important;
+}
+.pl-sm {
+  padding-left: 0.5rem !important;
 }
 
-.m-s {
-    margin: 0.5rem !important;
-}
-
+/* md */
 .p-m {
-    padding: 0.75rem !important;
+  padding: 0.75rem !important;
+}
+.p-md {
+  padding: 1rem !important;
+}
+.px-md {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+.py-md {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.pt-md {
+  padding-top: 1rem !important;
+}
+.pb-md {
+  padding-bottom: 1rem !important;
+}
+.pr-md {
+  padding-right: 1rem !important;
+}
+.pl-md {
+  padding-left: 1rem !important;
 }
 
+/* Margin utilities */
+/* xs */
+.m-xs {
+  margin: 0.25rem !important;
+}
+.mx-xs {
+  margin-right: 0.25rem !important;
+  margin-left: 0.25rem !important;
+}
+.my-xs {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+.mt-xs {
+  margin-top: 0.25rem !important;
+}
+.mb-xs {
+  margin-bottom: 0.25rem !important;
+}
+.mr-xs {
+  margin-right: 0.25rem !important;
+}
+.ml-xs {
+  margin-left: 0.25rem !important;
+}
+
+/* sm */
+.m-s {
+  margin: 0.5rem !important;
+}
+.m-sm {
+  margin: 0.5rem !important;
+}
+.mx-sm {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+.my-sm {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.mt-sm {
+  margin-top: 0.5rem !important;
+}
+.mb-sm {
+  margin-bottom: 0.5rem !important;
+}
+.mr-sm {
+  margin-right: 0.5rem !important;
+}
+.ml-sm {
+  margin-left: 0.5rem !important;
+}
+
+/* md */
 .m-m {
-    margin: 0.75rem !important;
+  margin: 0.75rem !important;
 }
-
-.p-l {
-    padding: 1rem !important;
+.m-md {
+  margin: 1rem !important;
 }
-
-.m-l {
-    margin: 1rem !important;
+.mx-md {
+  margin-right: 1rem !important;
+  margin-left: 1rem !important;
+}
+.my-md {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+.mt-md {
+  margin-top: 1rem !important;
+}
+.mb-md {
+  margin-bottom: 1rem !important;
+}
+.mr-md {
+  margin-right: 1rem !important;
+}
+.ml-md {
+  margin-left: 1rem !important;
 }

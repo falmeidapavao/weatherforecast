@@ -16,6 +16,8 @@ export interface Main {
   humidity: number;
   temp_min: number;
   temp_max: number;
+  feels_like: number;
+  rain: any;
 }
 
 export interface Wind {
@@ -36,7 +38,7 @@ export interface Sys {
   sunset: number;
 }
 
-export interface WeatherReponse {
+export interface WeatherResponse {
   coord: Coord;
   weather: Weather[];
   base: string;

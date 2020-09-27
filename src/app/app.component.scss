@@ -1,4 +1,5 @@
+@use "./@theme/variables.scss" as v;
+
 .app-root {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding-top: 60px;
 }

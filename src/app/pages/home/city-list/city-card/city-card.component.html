@@ -1,0 +1,36 @@
+<div class="city-card-wrapper p-md">
+    <a [routerLink]="['../detail', city.id]">
+        <div class="main-info pb-xs mb-sm">
+            <div class="city-name">{{ city.name }}</div>
+            <div class="main-temp">
+                <div class="actual">
+                    <span class="temperature mr-xs">{{ city.main.temp | number: '1.0-0' }}</span>
+                    <span class="unit-of-measure">°C</span>
+                </div>
+                <div class="feels-like">
+                    <span class="mr-xs">Feels</span>
+                    <span class="mr-xs">{{ city.main.feels_like | number: '1.0-0' }}</span>
+                    <span>°C</span>
+                </div>
+            </div>
+        </div>
+        <div class="weather-summary mb-sm">{{ city.weather[0].description | titlecase }}</div>
+        <div class="secondary-info">
+            <div class="humidity p-sm">
+                <fa-icon [icon]="faTint" class="mr-sm"></fa-icon>
+                <span class="mr-xs">Humidity:</span>
+                <span>{{ city.main.humidity }}%</span>
+            </div>
+            <div class="wind p-sm">
+                <fa-icon [icon]="faWind" class="mr-sm"></fa-icon>
+                <span class="mr-xs">Wind:</span>
+                <span>{{ city.wind.speed }} {{ city.wind.deg }}</span>
+            </div>
+            <div class="clouds p-sm">
+                <fa-icon [icon]="faCloud" class="mr-sm"></fa-icon>
+                <span class="mr-xs">Clouds:</span>
+                <span>{{ city.clouds.all }}%</span>
+            </div>
+        </div>
+    </a>
+</div>
