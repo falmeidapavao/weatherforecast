@@ -1,7 +1,7 @@
 <div class="city-card-wrapper p-md">
     <a [routerLink]="['../detail', city.id]">
         <div class="main-info pb-xs mb-sm">
-            <div class="city-name">{{ city.name }}</div>
+            <div class="city-name">{{ city.name }}, {{ city.sys?.country }}</div>
             <div class="main-temp">
                 <div class="actual">
                     <span class="temperature mr-xs">{{ city.main.temp | number: '1.0-0' }}</span>
@@ -24,7 +24,7 @@
             <div class="wind p-sm">
                 <fa-icon [icon]="faWind" class="mr-sm"></fa-icon>
                 <span class="mr-xs">Wind:</span>
-                <span>{{ city.wind.speed }} {{ city.wind.deg }}</span>
+                <span>{{ city.wind.speed }} {{ city.wind.deg | windDirection}}</span>
             </div>
             <div class="clouds p-sm">
                 <fa-icon [icon]="faCloud" class="mr-sm"></fa-icon>

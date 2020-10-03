@@ -9,9 +9,15 @@ import { EffectsModule } from "@ngrx/effects";
 import { HomeEffects } from "./effects/home.effects";
 import { CityCardComponent } from "./city-list/city-card/city-card.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { WindDirectionPipe } from "../../@core/pipes/wind-direction.pipe";
 
 @NgModule({
-  declarations: [HomeComponent, CityListComponent, CityCardComponent],
+  declarations: [
+    HomeComponent,
+    CityListComponent,
+    CityCardComponent,
+    WindDirectionPipe,
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule,
